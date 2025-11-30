@@ -16,7 +16,9 @@
 2. **Get a WalletConnect Project ID:**
    - Visit [WalletConnect Cloud](https://cloud.walletconnect.com/)
    - Create a free account and get your Project ID
-   - Update `src/lib/wagmi.ts` with your Project ID
+   - Create a `.env` file in the root directory
+   - Add the following line: `VITE_WALLETCONNECT_PROJECT_ID=your_project_id_here`
+   - Replace `your_project_id_here` with your actual Project ID from WalletConnect Cloud
 
 3. **Get test ETH:**
    - Visit [Base Sepolia Faucet](https://www.coinbase.com/faucets/base-ethereum-goerli-faucet)
@@ -57,8 +59,8 @@ contract BlockBazarPurchases {
    - Deploy and copy the contract address
 
 2. **Update the contract address:**
-   - Open `src/lib/contract.ts`
-   - Replace `CONTRACT_ADDRESS` with your deployed contract address
+   - Add the following line to your `.env` file: `VITE_CONTRACT_ADDRESS=your_deployed_contract_address`
+   - Replace `your_deployed_contract_address` with the address you copied from Remix after deployment
 
 ## Running the App
 

@@ -1,5 +1,16 @@
 // Smart Contract ABI and Address for Base Sepolia
-export const CONTRACT_ADDRESS = '0x0000000000000000000000000000000000000000'; // Replace with deployed contract
+// Get contract address from environment variable, fallback to zero address
+const contractAddress = import.meta.env.VITE_CONTRACT_ADDRESS || '0x0000000000000000000000000000000000000000';
+
+if (!import.meta.env.VITE_CONTRACT_ADDRESS || contractAddress === '0x0000000000000000000000000000000000000000') {
+  console.warn(
+    '⚠️ Smart Contract Address is not configured!\n' +
+    'Please create a .env file with VITE_CONTRACT_ADDRESS=your_contract_address\n' +
+    'Deploy the contract first using Remix IDE (see SETUP.md for instructions)'
+  );
+}
+
+export const CONTRACT_ADDRESS = contractAddress;
 
 export const CONTRACT_ABI = [
   {
