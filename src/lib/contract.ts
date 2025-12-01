@@ -14,13 +14,7 @@ export const CONTRACT_ADDRESS = contractAddress;
 
 export const CONTRACT_ABI = [
   {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "totalAmount",
-        "type": "uint256"
-      }
-    ],
+    "inputs": [],
     "name": "purchase",
     "outputs": [],
     "stateMutability": "payable",

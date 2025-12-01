@@ -16,7 +16,7 @@ export const Home = () => {
     return products.filter(product => {
       const matchesCategory = selectedCategory === 'All' || product.category === selectedCategory;
       const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           product.description.toLowerCase().includes(searchQuery.toLowerCase());
+        product.description.toLowerCase().includes(searchQuery.toLowerCase());
       return matchesCategory && matchesSearch;
     });
   }, [selectedCategory, searchQuery]);
@@ -28,12 +28,14 @@ export const Home = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h1 className="text-4xl font-bold mb-2 bg-gradient-primary bg-clip-text text-transparent">
-          Discover Web3 Products
-        </h1>
-        <p className="text-muted-foreground mb-8">
-          Shop securely with blockchain-powered payments
-        </p>
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-2 bg-gradient-primary bg-clip-text text-transparent">
+            The Future of Commerce
+          </h1>
+          <p className="text-muted-foreground mb-8">
+            Shop securely with blockchain-powered payments
+          </p>
+        </div>
 
         {/* Search Bar */}
         <div className="relative mb-6">
